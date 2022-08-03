@@ -1,0 +1,290 @@
+{
+    "key": "group_615c3c968202c",
+    "title": "Настройка шаблона",
+    "fields": [
+        {
+            "key": "field_615c3e3f53d16",
+            "label": "Активность",
+            "name": "templates_on",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_615c4fdda90ec",
+            "label": "Архив",
+            "name": "templates_arc",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_615c5e04d44a5",
+                        "operator": "==",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33.3",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_615c5e04d44a5",
+            "label": "Шапка & подвал",
+            "name": "templates_header_footer",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.3",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "Не выбрано",
+                "header": "Стиль для шапки",
+                "footer": "Стиль для подвала"
+            },
+            "default_value": [
+                "red"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_615c3cad9c470",
+            "label": "",
+            "name": "templates_group_tax",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_615c5e04d44a5",
+                        "operator": "==",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_615c50be95d43",
+                    "label": "Выбор типа",
+                    "name": "templates_type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "taxonomy": "Группы",
+                        "term": "Термины"
+                    },
+                    "default_value": [
+                        "taxonomy"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_615c5010a90ee",
+                    "label": "Шаблон для групп",
+                    "name": "templates_taxonomy",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_615c50be95d43",
+                                "operator": "==",
+                                "value": "taxonomy"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_615c505d139a7",
+                            "label": "",
+                            "name": "templates_taxonomy_in",
+                            "type": "taxonomy-chooser",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tax_type": 1,
+                            "choices": "",
+                            "type_value": 1,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "multiple": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_615c514e95d44",
+                    "label": "Шаблон для терминов",
+                    "name": "templates_term",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_615c50be95d43",
+                                "operator": "==",
+                                "value": "term"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_615c514e95d46",
+                            "label": "",
+                            "name": "templates_term_in",
+                            "type": "taxonomy-chooser",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tax_type": 0,
+                            "choices": "",
+                            "type_value": 1,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "multiple": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_615c5fbcb6e0a",
+            "label": "",
+            "name": "templates_post_type",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_615c5e04d44a5",
+                        "operator": "==",
+                        "value": "none"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_615c3e6894c93",
+                    "label": "Шаблон для типа записи",
+                    "name": "templates_post_type_in",
+                    "type": "post_type_selector",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "select_type": 2
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "templates_type"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1638730485
+}

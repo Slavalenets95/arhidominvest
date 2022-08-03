@@ -1,0 +1,14 @@
+.configurator__control-els table th {
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+.configurator__control-els table td {
+    text-align: center !important;
+}
+
+.intro_section_repeater_img img,
+.admin_img img {
+    max-height: 250px;
+    object-fit: cover;
+}
